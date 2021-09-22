@@ -25,7 +25,7 @@ app.get('/', (req, res) =>
  * @route Post api/users
  * @desc Register user
  */
-n
+
 app.post('/api/users', 
 [
 check('name', 'Please enter your name').not().isEmpty(),
