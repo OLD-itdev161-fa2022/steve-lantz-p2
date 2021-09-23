@@ -1,7 +1,7 @@
 
 import express from 'express';
 import connectDatabase from './config/db';
-import { check, validationResult, ValidationResult } from 'express-validator';
+import { check, validationResult} from 'express-validator';
 import cors from 'cors';
 
 // Initialize express application
@@ -12,15 +12,18 @@ connectDatabase();
 
 //Configure Middleware
 app.use(express.json({extended: false}));
-app.use(cors({
+app.use(
+  cors({
   origin: 'http://localhost:3000'
-}));
+})
+);
 
 // API endpoints
 /**
  * @route Get /
  * @desc Test endpoint
  * */
+
 app.get('/', (req, res) =>
   res.send('http get request sent to root api endpoint')
 );
