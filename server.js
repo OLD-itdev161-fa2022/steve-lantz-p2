@@ -20,7 +20,7 @@ app.use(
 
 // API endpoints
 /**
- * @route Get /
+ * @route GET /
  * @desc Test endpoint
  * */
 

@@ -14,9 +14,9 @@ componentDidMount () {
         data: response.data //set state of data above
       })
     })
-    .catch(error) => {
+    .catch((error) => {
       console.error('Error fetching data: ${error}');
-    }
+    })
 
 }
 
@@ -37,3 +37,4 @@ componentDidMount () {
 }
 
 export default App;
+
