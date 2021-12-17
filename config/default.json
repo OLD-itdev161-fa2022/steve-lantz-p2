@@ -1,5 +1,5 @@
 
 
 {
-  "mongoURI": "mongodb+srv://fmulder:test123@foxcluster.zomtw.mongodb.net/ITDEV-161?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://fmulder:test123@foxcluster.zomtw.mongodb.net/Project-2?retryWrites=true&w=majority"
 }

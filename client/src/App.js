@@ -1,40 +1,26 @@
+/*eslint-disable no-unused-vars */
 import React from 'react';
-import './App.css';
 import axios from 'axios';
-class App extends React.Component { // Class imports Component from React
-state = {
-  data: null
-}
-
-componentDidMount () {
-                                                  //Calls catch if there's an error
-  axios.get('http://localhost:5000') //Pass in api endpoint
-    .then((response) => {
-      this.setState({
-        data: response.data //set state of data above
-      })
-    })
-    .catch((error) => {
-      console.error('Error fetching data: ${error}');
-    })
-
-}
+import {BrowserRouter as Router } from 'react-router-dom';
+import {Navbar} from './components';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
 
-
-  render() {
+function App() {
     return (
-    <div className="App">
-      <header className="App-header">
-        Good Things
-      </header>
-      {this.state.data}
-    </div>
-  );
-}
+        <Router>
+            <Navbar />
+        </Router>
+    )
 }
 
-export default App;
 
+
+
+
+
+
+
+export default App
