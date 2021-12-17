@@ -59,7 +59,7 @@ class CreateMovie extends Component {
             this.setState({ rating })
     }
 
-    handleChangeInputTime = async event => {
+    handleChangeInputSummary = async event => {
         const summary = event.target.value
         this.setState({ summary })
     }
@@ -106,7 +106,7 @@ class CreateMovie extends Component {
                     type="text"
                     placeholder="Title"
                     value={title}
-                    onChange={e => onChange(e)}
+                    onChange={this.handleChangeInputTitle}
                 />
 
                 <Label>Rating: </Label>
@@ -115,7 +115,7 @@ class CreateMovie extends Component {
                     type="text"
                     placeholder="Rating"
                     value={rating}
-                    onChange={e => onChange(e)}
+                    onChange={this.handleChangeInputRating}
                 />
 
                 <Label>Summary </Label>
@@ -124,10 +124,10 @@ class CreateMovie extends Component {
                  type="text"
                  placeholder="Summary"
                 value={summary}
-                onChange={e => onChange(e)}
+                onChange={this.handleChangeInputSummary}
                 />
 
-                <button onClick={() => create()}>Add Movie</button>
+                <button onClick={this.handleIncludeMovie}>Add Movie</button>
                 <CancelButton href={'/movies/list'}>Cancel</CancelButton>
             </Wrapper>
         )
